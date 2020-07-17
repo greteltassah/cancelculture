@@ -1,0 +1,285 @@
+/******************************************************/
+/************** CSS FOR TAKE-ACTION.HTML **************/
+/******************************************************/
+body {
+  font: inherit;
+  background-image: url("https://cdn.glitch.com/7d917fd8-3fbe-48cc-9a12-d02def022e64%2Fnewbackground.png?v=1594949899838");
+  background-size: cover;
+}
+
+.page-header-action {
+  width: 100%;
+  position: absolute;
+  text-transform: uppercase;
+}
+.contained{
+  border-style: solid;
+  color:  #D9D2E9;
+  border-width: 0px 10px 700px 0px;
+  border-radius: 15px 15px 15px 15px;
+  margin: 50px 50px 0px 50px;
+  background-color: rgba(55, 50, 106, 0.3); 
+  color: rgba(55, 50, 106, 0.3);
+  position: relative;
+}
+
+.blank{
+  border: solid white;
+  width: 400px;
+  height: 400px;
+  background: white;
+  
+}
+
+#topt{
+  margin: 60px 0px 0px 0px;
+  color: white;
+  letter-spacing: 12px;
+  border: 30px solid #D9D2E9;
+  background: #D9D2E9;
+  border-radius: 20px 20px 20px 20px;
+}
+
+#desc{
+  color: white;
+  text-align: left;
+  padding: 30px 10px 10px 10px;
+  font-size: 2.5em;
+}
+
+.resources{
+  border: none;
+  width: 300px;
+  height: 400px;
+  font-size: 2em;
+  text-align: center;
+  padding: 50px 50px 0px 50px;
+  margin: 80px -700px 0px 0px;
+  border-radius: 20px 20px 20px 20px;
+  margin-inline-start: 64%;
+  margin-block-start:  -85%;
+  text-decoration: none;
+  font-weight: 200;
+  box-shadow: 
+    12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+  color: #fff;
+  position: absolute;
+}
+/******************************************************/
+/***************** ACTION ITEM LIST *******************/
+/******************************************************/
+
+/* Flexbox container that holds all flex items */
+.flex-container-action {
+  display: flex;
+
+  position: absolute;
+  padding: 0.5em 0;
+  align-items: center;
+
+  left: 5%;
+  right: 5%;
+
+  margin: 5% 0;
+  width: 90%;
+
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: start;
+  color: white;
+  font-weight: bold;
+
+}
+
+/* Left box under title; item in .flex-container */
+.action-info-container {
+  width: 100%;
+  margin-right: 5%;
+  margin-left: 0;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding-right: 35px;
+  padding-left: 35px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-size: 16px;
+  flex-grow: 2;
+  /*border-style: dotted;*/ /*Uncomment to see the outline of the container*/
+}
+
+.action-info-container img {
+  width: 100%;
+}
+
+/* Right box under title; item in .flex-container */
+.action-list-container {
+  width: 75%;
+  padding: 35px;
+  margin: 5%;
+  flex-grow: 1;
+  background-color: black;
+  /*border-style: dotted;*/ /*Uncomment to see the outline of the container*/
+}
+
+/* Holds all elements related to the action item list; inside the action-list-container */
+#checklist {
+  background: linear-gradient(to right top, #d9d2e9, #e2ddef, #ebe8f4, #f5f4fa, #ffffff);
+  border-radius: 15px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  box-shadow: 
+    12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+  color: #fff;
+  margin: 130px 0px 300px 200px;
+}
+
+/* Header in the list container */
+#checklist-header {
+  font: inherit;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  color: #3C3649;
+  letter-spacing: 2px;
+  /*border-style: dotted;*/ /*Uncomment to see the outline of the container*/
+}
+
+/* Intructions inside the list container */
+#instructions {
+  font: inherit;
+  text-align: center;
+  font-style: italic;
+  color: #776C92;
+  /*border-style: dotted;*/ /*Uncomment to see the outline of the container*/
+}
+
+/* The div container for the unordered action item list */
+#my-list {
+  padding: 0px 0 0 0;
+  margin: 0;
+  font-size: 10pt;
+}
+
+/* Styling for individual action list items */
+#my-list li {
+  cursor: pointer;
+  padding-top: 8px;
+  padding-right: 30px;
+  padding-bottom: 8px;
+  padding-left: 35px;
+  position: relative;
+  list-style-type: none;
+  transition: 0.2s;
+  width: 85%;
+  color: black;
+  /*border-style: dotted;*/ /*Uncomment to see the outline of the container*/
+}
+
+/* Styling for the check squares added at the beginning of each list item */
+#my-list li::before {
+  content: "";
+  position: absolute;
+  border-color: white;
+  border-style: solid;
+  border-width: 2px;
+
+  top: 15px;
+  left: 13px;
+  height: 10px;
+  width: 10px;
+}
+
+/* Change background color when cursor hovers over list items */
+#my-list li:hover {
+  background: white;
+  color: grey;
+}
+
+/* Change check square color when cursor hovers over */
+#my-list li:hover::before {
+  border-color: black;
+  border-style: solid;
+}
+
+/* When marked complete (i.e. clicked on) add strikethrough */
+#my-list li.all-done {
+  text-decoration: line-through;
+  color: white;
+}
+
+/* Add a "checked" mark when clicked on */
+#my-list li.all-done::before {
+  content: "";
+  position: absolute;
+  border-color: black;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 5px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+#socials{
+  width: 150%;
+  height: 150%;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 
+    12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+/******************************************************/
+/** CHANGE TAKE-ACTION.HTML CSS BASED ON SCREEN SIZE **/
+/******************************************************/
+
+/* IF THE SCREEN IS ~~700 OR LESS~~ IMPLEMENT THESE RULES */
+
+@media only screen and (max-width: 700px) {
+  .flex-container-action {
+    flex-wrap: wrap;
+  }
+}
+
+/* IF THE SCREEN IS ~~701 OR MORE~~ IMPLEMENT THESE RULES */
+
+@media only screen and (min-width: 701px) {
+  .flex-container-action {
+    flex-wrap: nowrap;
+  }
+
+  .left-container {
+    width: 50%;
+    margin-right: 10%;
+  }
+}
+
+/* IF THE SCREEN IS ~~1000 OR MORE~~ IMPLEMENT THESE RULES */
+@media only screen and (min-width: 1000px) {
+  .flex-container-action {
+    flex-wrap: nowrap;
+  }
+}
+
+/* IF THE SCREEN IS ~~1250 OR MORE~~ IMPLEMENT THESE RULES */
+@media only screen and (min-width: 1250px) {
+  .flex-container-action {
+    flex-wrap: nowrap;
+  }
+
+  #list-container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px 20px 40px 40px;
+  }
+
+  .left-container {
+    width: 50%;
+    margin-right: 10%;
+  }
+}

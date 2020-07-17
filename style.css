@@ -1,0 +1,508 @@
+/* 
+
+This CSS file is contains the CSS rule sets for 
+    - index.html
+    - any universal elements that all pages use
+
+The CSS for the take-action.html is in take-action.css
+
+*/
+
+/************************************************/
+/************* UNIVERSAL ELEMENTS ***************/
+/************************************************/
+
+/* TODO: Customize your font properties and background color for all elements inside the <body> and <html> tags */
+body,
+html {
+  height: 100%;
+  font-size: 20px; /* Change the font size*/
+  font-family: "Nunito", sans-serif; /* Change the font */
+  line-height: 1.5em; /* Change the line height size*/
+  margin: 0em;
+  color: white; /* Change the font color*/
+  background-color: #D9D2E9; /* Change the background color */
+  box-sizing: border-box;
+}
+
+h1 {
+  letter-spacing: 4px;
+  font-size: 50px;
+  /*TODO: Change the font-family property to your linked font*/
+  font-family: "Nunito", sans-serif;
+  color: #43d6b9ff;
+  text-align: center;
+}
+
+/*TODO: Change the font-family property to your linked font*/
+h2 {
+  letter-spacing: 3px;
+  font-size: 25px;
+  font-family: "Nunito", sans-serif;
+  color: #43d6b9ff;
+  text-align: center;
+  line-height: 1.3em;
+}
+
+/*TODO: Change the color of a link when a person hovers over it*/
+p a {
+  color: #43d6b9ff;
+  text-decoration: none;
+}
+
+/************************************************/
+/*************** CSS FOR NAV BAR ****************/
+/************************************************/
+
+/* All of these TODOs are optional. You should change the styling based on your mockup */
+
+/* TODO (optional): Change the background color and/or border style */
+
+ul.nav-bar {
+  /* Styling for the <ul class="nav-bar"> element */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  border-style: solid;
+  border-color: white;
+  border-width: 10px 10px 10px 0;
+}
+
+/* TODO (optional): Change the font size*/
+
+li.nav {
+  /* Styling for the <li class="nav"> element */
+  float: right;
+  font-size: 15px;
+}
+
+/* TODO (optional): Change the font color, decoration, and/or case */
+
+li.nav a {
+  /* Styling for the <a> elements in <li class="nav"> */
+  display: block;
+  color: grey;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 15px 15px 15px 15px;
+}
+
+/* TODO (optional): Change the background color and/or font color when the mouse hovers over an item */
+
+li.nav a:hover {
+  /* Styling for the <a> elements when the mouse is hovering in <li class="nav"> */
+  background-color: #D9D2E9;
+  color: white;
+}
+
+/************************************************/
+/*********** CSS FOR FLEXBOX HEADING ************/
+/************************************************/
+
+/* TODO: Review the CSS properties to the flexbox container for title and intro text */
+.flex-container {
+  display: flex; /* Set the flexbox display */
+  flex-direction: column; /* Configure the flex items to column */
+  flex-wrap: nowrap; /* Don’t wrap the flex items */
+  justify-content: left; /* Justify the flex items to the center */
+  align-items: left; /* Align the flex items to the center */
+
+  /* Design properties */
+  background-color: #D9D2E9;
+  padding: 5px;
+  height: 50px;
+  width: 350px;
+  border-radius: 15px 15px 15px 15px;
+  border: solid white;
+  border-width: 4px;
+  margin-inline-start: 95px;
+  margin-block-start: .05em;
+
+  /* Positioning properties */
+  position: absolute;
+  left: 0;
+  right: 5%;
+  top: 27%; /* Change this value to move the box up or down */
+
+  /*Debugging Tip: Uncomment the line below to see the outline of the container*/
+  /*border-style: dotted;*/
+}
+
+/* TODO: Review the CSS properties to the flex item for the heading (the left box) */
+.hashtag{
+  margin-inline-start: 42%;
+  margin-block-start: -2.5em;
+  color: white;
+  text-align: center;
+  padding: 10px 0px 50px 300px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: absolute;
+}
+.heading-home {
+  padding: 2%;
+  color: white;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 2px;
+  line-height: 46px;
+  text-align: center;
+
+  /*Debugging Tip: Uncomment the line below to see the outline of the container*/
+  /*border-style: dotted;*/
+}
+
+/* TODO: Review the CSS properties to the flex item for the intro text (the right box) */
+.intro-text {
+   /* Add your own background color */
+  padding: 2%;
+  margin: 3%;
+  color: white; /* Add the color of your font */
+  font-size: 50px; /* Add your font size*/
+  letter-spacing: 2px; /* Adds space between letters */
+  line-height: 1.4em; /* Adds space between lines */
+  text-align: left;
+
+  /*Debugging Tip: Uncomment the line below to see the outline of the container*/
+  /*border-style: dotted;*/
+}
+li.action a{
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  font-size: 30px;
+  position: absolute;
+}
+
+.action{
+  margin-inline-start: 705px;
+  margin-block-start: -5.3em;
+  width: 500px;
+  height: 50px;
+  list-style-type: none;
+  background: #D9D2E9;
+  position: absolute;
+}
+
+
+code{
+  background: none;
+  border-radius: 6px;
+  box-shadow: 
+    12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+  color: #fff;
+  display: block;
+  font-family: "Nunito", sans-serif; 
+  font-weight: bold;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+header,
+section,
+aside,
+footer {
+  margin: 0 1.5% 24px 1.5%;
+}
+
+header,
+section,
+footer,
+aside.relative {
+  position: relative;
+  left: 230%;
+  bottom: 300px;
+}
+
+footer {
+  margin-bottom: 0;
+}
+code:hover{
+  background-color: #D9D2E9;
+}
+
+.downie{
+    position: absolute;
+    top: 91%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.downie span{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+    
+}
+.downie span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.downie span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+/************************************************/
+/*************** PARALLAX SCROLL ****************/
+/************************************************/
+
+/*-----------TEXT SECTIONS-----------*/
+
+/* TODO (optional): Change the background color and/or text alignment */
+
+.text-section {
+  background-color: #D9D2E9;
+  padding: 5px 15px;
+  margin: 0px;
+  text-align: center;
+}
+
+/*---------IMAGE STYLING + PARALLAX PROPERTY---------*/
+
+/* TODO: Add the CSS selector for each image to the collective image rule set */
+
+.main-message,
+.image-one {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #43d6b9ff;
+  background-size: cover;
+  min-height: 95%; /* This adjusts the height of the image */
+
+  /* TODO: Add the property to create the parallax scrolling effect here */
+  
+}
+
+/* TODO: Replace the current image URL with your own. This is the top image on your homepage. */
+.main-message {
+  background-image: url("https://cdn.glitch.com/7d917fd8-3fbe-48cc-9a12-d02def022e64%2Fa1.jpg?v=1594822245918");
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* TODO: Replace the current image URL with your own */
+.image-one {
+  background-image: url("https://cdn.glitch.com/7d917fd8-3fbe-48cc-9a12-d02def022e64%2Funited-nations-covid-19-response-DIijTuIOYvA-unsplash.jpg?v=1594912130262");
+  overflow: hidden;
+}
+
+/* TODO: Add a second background image. Make sure you add this class selector to the collective image rule set above */
+
+/* TODO: Add more background images by repeating the process above */
+
+/*-----------IMAGE ATTRIBUTIONS (if required)-----------*/
+.attributions {
+  font-size: 12px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+
+.box2 {
+  align-items: center;
+  background-color: none;
+  box-shadow: 
+    12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+  border-radius: 10px 10px 10px 10px;
+  display: flex;
+  justify-content: center;
+}
+.frst{
+  color: #454545;
+  font-size: 2.8em;
+  text-align: left;
+  padding: 0px 0px 0px 150px;
+}
+
+/******************************************************/
+/***** ISSUE BUTTON AND ANIMATION/TRANSITION *****/
+/******************************************************/
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+button.btn {
+  width: 12rem;
+  height: auto;
+}
+button.btn .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+button.btn .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: 1.5em;
+  background: #fff;
+}
+button.btn .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  margin-top: 1.5em;
+  background: none;
+}
+button.btn .circle .icon.arrow::before {
+  position: absolute;
+  content: '';
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+button.btn .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  top: 0.5em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top:1em;
+  color: #282936;
+  font-weight: 700;
+  line-height: 2;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top:2em;
+  margin-left:75px; 
+  
+  
+}
+button:hover .circle {
+  width: 100%;
+}
+button:hover .circle .icon.arrow {
+  background: #fff;
+  -webkit-transform: translate(1rem, 0);
+          transform: translate(1rem, 0);
+}
+button:hover .button-text {
+  color: #fff;
+}
+#noun{
+  font-style: italic;
+  text-align: left;
+  margin: 0px 0px 0px 150px;
+  font-size: 1.8em;
+  color: #454545;
+}
+#one{
+  text-align: left;
+  margin: 20px 0px 20px 150px;
+  font-size: 1.2em;
+  color: #454545;
+}
+.imginfo img {
+  border-style: solid;
+  border-color: white;
+  border-width: 6px;
+  height: 10em;
+  margin: 50px 20px 0px 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.imginfo{
+  border-radius: 15px 15px 15px 15px;
+  background-color: white;
+  margin: 50px 100px 0px 100px;
+  background-color: white;
+  box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5);
+  color: #454545;
+}
+#hi3{
+  position: absolute;
+  border: 2px solid #D9D2E9;
+  background: #D9D2E9;
+  border-radius: 15px 15px 15px 15px;
+  padding: 15px 15px 15px 15px;
+  color: #454545;
+  width: 600px;
+  height: 90px;
+  margin-inline-start: 550px;
+  margin-block-start: -170px;
+}
+
+#hi2{
+  position: absolute;
+  border: 2px solid #D9D2E9;
+  background: #D9D2E9;
+  border-radius: 15px 15px 15px 15px;
+  padding: 15px 15px 15px 15px;
+  color: #454545;
+  width: 600px;
+  height: 90px;
+  margin-inline-start: 550px;
+  margin-block-start: -180px;
+}
+
+#hi1{
+  position: absolute;
+  border: 2px solid #D9D2E9;
+  background: #D9D2E9;
+  border-radius: 15px 15px 15px 15px;
+  padding: 15px 15px 15px 15px;
+  color: #454545;
+  width: 600px;
+  height: 110px;
+  margin-inline-start: 550px;
+  margin-block-start: -190px;
+}
+
+
+/******************************************************/
+/***** CHANGE INDEX.HTML CSS BASED ON SCREEN SIZE *****/
+/******************************************************/
+
+/* TODO: Add a breakpoint if the screen is 700px or less */
+/* search for media queries in css */ 
+/* TODO: Add additional breakpoints based on your website's design
